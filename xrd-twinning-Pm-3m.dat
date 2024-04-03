@@ -1,0 +1,32 @@
+{DIFFaX code to compute an X-ray diffraction pattern for a structure with planar defects.}
+{PtCu3 Pm-3m structure, 5 % randomly occurring twin boundaries, parallel to {111} planes.}
+INSTRUMENTAL
+X-RAY
+1.5418
+PSEUDO-VOIGT 0.1 -0.036 0.009 0.1 TRIM
+
+STRUCTURAL
+5.24647 5.24647 2.14197 120.0    {unit cell in the correct direction}
+unknown
+2
+
+LAYER 1    {unit cell contents}
+NONE
+Pt  1 0.0  0.0  0.0  0.02  1.0
+Cu  2 0.0  1/2  0.0  0.02  1.0
+Cu  3 1/2  1/2  0.0  0.02  1.0
+Cu  4 1/2  0.0  0.0  0.02  1.0
+
+LAYER 2 = 1
+
+STACKING
+recursive
+infinite
+
+TRANSITIONS
+0.95   1/3   2/3  1.0    {layer 1 to layer 1}
+0.05   2/3   1/3  1.0    {layer 1 to layer 2}
+
+{Transitions from layer 2}
+0.05   1/3   2/3  1.0    {layer 2 to layer 1}
+0.95   2/3   1/3  1.0    {layer 2 to layer 2}
